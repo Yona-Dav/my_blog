@@ -1,0 +1,15 @@
+
+<ul>
+    <li> Title : {{post.title}}</li>
+    <li> Author : {{post.owner.username}}</li>
+    <li> Created : {{post.timestanp|timesince}}</li>
+    <li> Content : {{post.content}}</li>
+    <li>
+        <ul>
+            {%for comment in post.comment_set.all%}
+            <li>{{comment.content}}</li>
+            {%endfor%}
+        </ul>
+    </li>
+</ul>
+

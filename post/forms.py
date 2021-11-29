@@ -6,4 +6,4 @@ class PostModelForm(forms.ModelForm):
     class Meta:
         model = Post
         #fields = '__all__'
-        exclude = ['timestanp', 'likes']
+        exclude = ['timestanp', 'likes', 'owner']
